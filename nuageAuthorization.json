@@ -1,0 +1,30 @@
+[
+  {
+    "firstName": "Centina",
+    "lastName": "JMS_Client",
+    "userName": "centinajms",
+    "email": "jmsclient@email.com",
+    "mobileNumber": "1234567890",
+    "password": null,
+    "role": "CSPROOT",
+    "enterpriseName": "CSP",
+    "avatarType": null,
+    "avatarData": null,
+    "licenseCapabilities": [
+      "ENCRYPTION_ENABLED"
+    ],
+    "statisticsEnabled": true,
+    "statsTSDBServerAddress": "10.10.0.21:9300,10.10.0.22:9300,10.10.0.23:9300",
+    "flowCollectionEnabled": false,
+    "vssStatsInterval": 30,
+    "aarFlowStatsInterval": 30,
+    "aarProbeStatsInterval": 30,
+    "entityScope": null,
+    "externalId": null,
+    "ID": "64fafea2-4e93-4fa6-91c1-db491fb36787",
+    "APIKey": "79850765-6ab7-4b43-a679-bb19c76909a9",
+    "APIKeyExpiry": 1627925847091,
+    "enterpriseID": "76046673-d0ea-4a67-b6af-2829952f0812",
+    "externalID": null
+  }
+]
