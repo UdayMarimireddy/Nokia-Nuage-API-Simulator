@@ -1,0 +1,14 @@
+<div ng-controller="homeContentCtrl" class="container" id="headerContent" style="background: url('images/banner2.jpg');background-size: contain;">
+    <h1 class="image-text main-header-family"> Book Ticket(s) Within Seconds </h1>
+    <form>
+        <div class="form-group">
+            <input class="locationAC" type="text" ng-model="from" />
+            <input class="locationAC" type="text" ng-model="to" />
+            <input type="date" ng-model="onDate">
+        </div>
+        <div class="btn-group">
+            <button class="fa fa-search  btn btn-info" ng-click="searchSubmit( from, to, onDate )">&nbsp;Search Buses</button>
+        </div>
+    </form>
+</div>
+<div ng-include="'views/footer.html'"></div>

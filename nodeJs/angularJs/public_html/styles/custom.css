@@ -1,0 +1,230 @@
+.loginPage {
+     margin-top: 17% 
+}
+ .login-title {
+     color: #555;
+     font-size: 18px;
+     font-weight: 400;
+     display: block;
+}
+ .inset-text-effect {
+     color: #01579B;
+     text-align: center;
+     font-style: italic;
+     font-family: cursive;
+}
+ .inset-text-effect > img {
+     height: 50px;
+     width: 50px 
+}
+ .signin input, .signup input {
+     height: 25px;
+    border: 0;
+}
+
+.signin {
+    width: 200px;
+}
+
+.signup {
+     margin-top: -50px;
+     width: 250px;
+}
+ .navbar {
+     border-radius: 0px;
+     border-bottom: 1px solid blanchedalmond;
+}
+ .navbar .navbar-nav {
+     display: inline-block;
+     float: none;
+     margin-top: -10px;
+}
+ .navbar .navbar-collapse {
+     text-align: right;
+     margin-top: 25px 
+}
+ .navbar-header {
+     height: 100px;
+}
+ .navbar-brand, .navbar-toggle {
+     margin-top: 30px 
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+ @media screen and (max-width: 767px) {
+     .sidenav {
+         height: auto;
+         padding: 5px;
+    }
+     .row.content {
+         height: auto;
+    }
+}
+/* * STYLE 1 */
+ #loginPage::-webkit-scrollbar-track, #home::-webkit-scrollbar-track {
+     background-color: transparent;
+}
+ #loginPage::-webkit-scrollbar, #home::-webkit-scrollbar {
+     width: 7px;
+     background-color: #F5F5F5;
+}
+ #loginPage::-webkit-scrollbar-thumb, #home::-webkit-scrollbar-thumb {
+     border-radius: 15px;
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+     background-color: #555;
+}
+ #home {
+     background-color: rgba(255,255,255, 0.1);
+     color: inherit;
+}
+ #home > div {
+     padding-left: 0px;
+     padding-right: 0px;
+}
+ #toggleMenuDisplay {
+     height: 228px;
+     color: #222;
+     right: 10px;
+     z-index: 3;
+     position: fixed;
+     border-radius: 4px;
+     background-color: #222;
+     margin: -20px 10px 0px 0px;
+}
+ #toggleMenuDisplay > ul > li > a{
+     color: grey;
+     font-weight: bold;
+     font-size: 15px;
+}
+ #toggleMenuDisplay > ul > li > a > i{
+     width: 20px;
+     text-align: center;
+}
+ .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+     background-color: #EEE;
+}
+/*Footer*/
+ footer {
+     background-color:#222222;
+    font-family: 'Open Sans', sans-serif;
+     border-top: 1px solid blanchedalmond;
+}
+ .copyright {
+     min-height:40px;
+}
+ .copyright p {
+     text-align:left;
+     color:#FFF;
+     padding:10px 0;
+     margin-bottom:0px;
+}
+ .bottom_ul {
+     list-style-type:none;
+     float:right;
+     margin-bottom:0px;
+}
+ .bottom_ul li {
+     float:left;
+     line-height:40px;
+}
+ .bottom_ul li:after {
+     content:"/";
+     color:#FFF;
+     margin-right:8px;
+     margin-left:8px;
+}
+ .bottom_ul li a {
+     color:#FFF;
+     font-size:12px;
+}
+ .bottom_ul > li:hover {
+     font-weight: bolder;
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+}
+ #headerContent {
+    /* height: 0%;
+     margin-top: -10px;
+    */
+     opacity: 0.8;
+     border-radius: 10px;
+     text-align: center;
+}
+ #headerContent > form > div > input {
+     height: 30px;
+}
+ #headerContent > form > div > button {
+     height: 30px;
+     width: 120px;
+     margin-top: -10px;
+}
+ #headerContent > form > div {
+     text-align: center;
+    /*display: inline-flex*/
+}
+ .autocomplete input{
+     width: 200px;
+     height: 30px;
+}
+ #busList {
+     background-color: white;
+     text-align: center;
+     padding: 10px;
+     margin: 10px;
+     box-shadow: 5px 5px 5px grey;
+}
+ #busList h5 {
+     float: left;
+     padding: 20px;
+}
+ #busList h6 {
+}
+ .autoc_drop_down {
+     background-color: whitesmoke;
+     border: solid 1px;
+     border-color: white;
+     border-radius: 5px;
+     text-align: center;
+}
+ .help-block {
+     line-height: 100%;
+}
+
+/*Seat Layout*/
+.seatSelection {
+  text-align: center;
+  padding: 5px;
+	margin: 15px;}
+
+.seatsReceipt {text-align: center;}
+
+.seatNumber {
+	display: inline;
+	padding: 10px;
+	background-color: #5c86eb;
+	color: #FFF;
+	border-radius: 5px;
+	cursor: default;
+	height: 25px;
+	width: 25px;
+	line-height: 25px;
+	text-align: center;
+ }
+
+.seatRow {padding: 10px;}
+
+.seatSelected {
+	background-color: lightgreen;
+	color: black;
+ }
+
+.seatUnavailable {background-color: gray;}
+
+.seatRowNumber {
+	clear: none;
+	display: inline;
+ }
+
+.hidden {display: none;}
+
+.seatsAmount {max-width: 2em;}

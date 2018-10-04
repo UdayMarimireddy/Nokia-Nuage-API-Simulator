@@ -1,0 +1,170 @@
+/*=== Login ===*/
+.login-form-1 {
+  max-width: 300px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.main-login-form {
+  position: relative;
+}
+
+.login-form-1 .form-control {
+  border: 0;
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  background: transparent;
+  color: #555555;
+  padding: 7px 0;
+  font-weight: bold;
+  height:auto;
+}
+
+.login-form-1 .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.login-form-1 .form-control:-moz-placeholder,
+.login-form-1 .form-control::-moz-placeholder,
+.login-form-1 .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+
+.login-form-1 .form-group {
+  margin-bottom: 0;
+  border-bottom: 2px solid #efefef;
+  padding-right: 20px;
+  position: relative;
+}
+
+.login-form-1 .form-group:last-child {
+  border-bottom: 0;
+}
+
+.login-group {
+  background: #ffffff;
+  color: #999999;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.login-form-1 .login-button {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  background: #ffffff;
+  color: #999999;
+  padding: 11px 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border: 5px solid #efefef;
+  border-radius: 50%;
+  transition: all ease-in-out 500ms;
+}
+
+.account-wall
+{
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    margin-top: -10px;
+}
+
+.navbar .navbar-collapse {
+    text-align: right;
+}
+
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 5px;
+  }
+  .row.content {
+      height: auto;
+  }
+}
+
+/*
+ *  STYLE 1
+ */
+
+#home::-webkit-scrollbar-track
+{
+    border-radius: 15px;
+    background-color: #FFF;
+}
+
+#home::-webkit-scrollbar
+{
+    width: 7px;
+    background-color: #F5F5F5;
+}
+
+#home::-webkit-scrollbar-thumb
+{
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+#toggleMenuDisplay {
+    height: 228px;
+    color: #222;
+    right: 10px;
+    position: fixed;
+    border-radius: 4px;
+    background-color: #222;
+    margin: -20px 10px 0px 0px;
+}
+
+#toggleMenuDisplay > ul > li > a{
+    color: grey;
+    font-weight: bold;
+    font-size: 15px;  
+}
+
+#toggleMenuDisplay > ul > li > a > i{
+    width: 20px;
+    text-align: center;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #EEE;
+}
+
+.login-button:hover {
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.24), 0 0 5px 5px rgba(0,0,0,0.19);
+}

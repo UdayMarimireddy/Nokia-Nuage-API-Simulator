@@ -1,0 +1,74 @@
+<div id="loginPage" style="overflow:auto" ui-view>
+    <div class="row">
+        <!--<H1 class="inset-text-effect"> YOUA </H1>-->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 loginPage" align="center">
+            <!-- Main Form -->
+            <div class="signin">
+                <h1 class="text-center login-title">Sign in</h1>
+                <form class="text-left" name="signInForm">
+                    <!-- USERNAME -->
+                    <div>
+                        <label>Username</label>
+                        <input type="text" name="username" class="form-control" ng-model="signInVM.user" placeholder="Username" required>
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" ng-model="signInVM.pass" placeholder="Password" required>
+                    </div>
+                    <div style="text-align: center">
+                        <button type="submit" class="btn btn-default" ng-disabled="signInForm.$invalid" ng-click="signInVM.login()"><i class="fa fa-sign-in"></i> Signin </button>
+                    </div>
+                </form>
+            </div>
+            <!-- end:Main Form -->
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 loginPage" align="center">
+            <!-- Main Form -->
+            <div class="signup">
+                <form class="text-left" name="userForm">
+                    <h1 class="text-center login-title">Sign up</h1>
+                    <!-- USERNAME -->
+                    <div ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+                        <label>Username</label>
+                        <input type="text" name="username" class="form-control" ng-model="signInVM.username" ng-minlength="3" ng-maxlength="8" placeholder="Username" required>
+                        <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                        <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                        <label>E-mail Address</label>
+                        <input type="email" name="email" class="form-control" ng-model="signInVM.email" placeholder="Your email address" required>
+                        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" ng-model="signInVM.password" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,14}$/" placeholder="New password" required>
+                        <p ng-show="userForm.password.$error.pattern" class="help-block">
+                            Password must be 8 to 14
+                            <BR> characters long and
+                            <BR> must contain one digit,
+                            <BR> uppercase, lowercase
+                            <BR> and special character.
+                        </p>
+                    </div>
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div ng-class="{ 'has-error' : userForm.confirmPassword.$invalid && !userForm.confirmPassword.$pristine }">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirmPassword" ng-model="signInVM.confirmPassword" compare-to="password" class="form-control" placeholder="Re-enter password" required />
+                        <p ng-show="userForm.confirmPassword.$error.compareTo" class="help-block"> Passwords don't match. </p>
+                    </div>
+                    <div style="text-align: center">
+                        <button type="submit" class="btn btn-default" ng-click="signInVM.signup()" ng-disabled="userForm.$invalid"><i class="fa fa-user-plus"></i> Signup </button>
+                    </div>
+                </form>
+            </div>
+            <!-- end:Main Form -->
+        </div>
+    </div>
+</div>

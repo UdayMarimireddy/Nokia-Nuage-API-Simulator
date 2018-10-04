@@ -1,0 +1,53 @@
+<div  class="container" ng-controller="busListCtrl">
+    <h1 class="image-text main-header-family" style="text-align:center"> Available Buses </h1>
+    <div id="busList" ng-repeat="bus in buses track by $index" class="panel panel-default" ng-click="showBusLayout( bus.fromLoc, bus.toLoc, bus.dateTime, $index )">
+        <h5>{{bus.serviceNo}}</h5><h4><a href="#">{{bus.bus}}</a></h4><h6>{{bus.time}}</h6>
+        <div ng-show="showLayout === $index">
+            Boarding Point
+            <select ng-model="boardingPoint" ng-options="b for b in boardingPoints"></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Dropping Point
+            <select ng-model="droppingPoint" ng-options="d for d in droppingPoints"></select>
+            <div class="btn-group">
+                <button class="fa fa-search  btn btn-info" ng-click="showSeatLayout( boardingPoint, droppingPoint )">&nbsp;Show Layout</button>
+            </div>
+            <div id="busLayout">
+                <div class="seatSelection col-lg-12">
+                        <p class="seatSection">
+                         Your first
+                            <span class="freeSeats">2</span> seats selected will be Free.<br /> You can add more seats and proceed to check out.
+                        </p>
+                        <div class="seatsChart col-lg-6">
+                            <div class="seatRow">
+                                <div class="seatRowNumber">
+                                    Row 1
+                                </div>
+                                <div id="1_1" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber seatUnavailable">1</div>
+                                <div id="1_2" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+
+
+                            </div>
+                            <div class="seatRow">
+                                <div class="seatRowNumber">
+                                    Row 2
+                                </div>
+                                <div id="2_1" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                                <div id="2_2" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber seatUnavailable">2</div>
+
+                            </div>
+                        </div>
+                        <div class="seatsReceipt col-lg-2">
+                            <p><strong>Selected Seats: <span class="seatsAmount" /> </span></strong> <button id="btnClear" class="btn">Clear</button></p>
+                            <ul id="seatsList" class="nav nav-stacked"></ul>
+
+                        </div>
+                    </div>
+
+                    <div class="checkout col-lg-offset-6">
+                        <span>Subtotal: CA$</span><span class="txtSubTotal">0.00</span><br /><button id="btnCheckout" name="btnCheckout" class="btn btn-primary"> Check out </button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div ng-include="'views/footer.html'" ></div>
