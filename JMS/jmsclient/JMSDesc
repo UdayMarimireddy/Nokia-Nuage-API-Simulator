@@ -1,0 +1,51 @@
+1. JMS Administered Objects:
+
+    > Configure the JNDI namespace, and JMS clients then access them by using resource injection.
+
+        Context.INITIAL_CONTEXT_FACTORY: "org.apache.activemq.jndi.ActiveMQInitialContextFactory"
+        InitialContext.URL_PKG_PREFIXES: "org.jboss.naming:org.jnp.interfaces"
+        Context.PROVIDER_URL: "tcp://10.10.0.12:61616" (IP & port will be fetching from the prop file specified @/centina/med/conf/ location)
+
+2. JMS Connection Factories:
+
+    > A connection factory is the object a client uses to create a connection to a provider.
+      A connection factory encapsulates a set of connection configuration parameters that has been defined by an administrator.
+
+        @Resource(lookup = "jms/ConnectionFactory")
+
+3. JMS Destinations:
+
+    > A destination is the object a client uses to specify the target of messages it produces and the source of messages it consumes.
+      In the pub/sub messaging domain, destinations are called topics.
+
+        @Resource(lookup = "jms/Topic")
+
+4. JMS Connections:
+
+    > A connection encapsulates a virtual connection with a JMS provider.
+      For example, a connection could represent an open TCP/IP socket between a client and a provider service daemon.
+      You use a connection to create one or more sessions.
+
+        Connection connection = connectionFactory.createConnection(jmsUser, jmsPassword);
+
+5. JMS Sessions:
+
+    > A session is a single-threaded context for producing and consuming messages.
+
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+
+6. JMS Message Listeners:
+
+    > A message listener is an object that acts as an asynchronous event handler for messages.
+      This object implements the MessageListener interface, which contains one method, onMessage.
+      In the onMessage method, you define the actions to be taken when a message arrives.
+
+        Listener myListener = new Listener();
+        consumer.setMessageListener(myListener);
+
+7. JMS Message Selectors:
+
+    > If your messaging application needs to filter the messages it receives, you can use a JMS API message selector,
+      which allows a message consumer to specify the messages that interest it.
+
+        NewsType = ’Sports’ OR NewsType = ’Opinion’
