@@ -19,46 +19,7 @@ var options = {
   cert: fs.readFileSync('SSL/cert.pem')
 };
 
-app.get( '/nuage/', function(req, res){
-    
-    var i = 0;
-    var num = 25;
-    var array = [];
-    var obj = {
-    "children": null,
-    "parentType": "nsgateway",
-    "entityScope": "ENTERPRISE",
-    "lastUpdatedBy": "43f8868f-4bc1-472c-9d19-533dcfcb1ee0",
-    "lastUpdatedDate": 1524704415000,
-    "creationDate": 1524704415000,
-    "name": "NSG-X5 54.222.107.189 NSG Physical Port configuration error.",
-    "reason": "NSG Physical Port configuration error.",
-    "description": "The NSG has invalid Physical Port name assigned.  Check physical names assigned to ports on the NSG.",
-    "acknowledged": false,
-    "numberOfOccurances": 2,
-    "severity": "INFO",
-    "errorCondition": 3746,
-    "owner": "43f8868f-4bc1-472c-9d19-533dcfcb1ee0",
-    "ID": "a2b39988-1720-42a8-a10e-6183315105a7",
-    "parentID": "c48df22c-25de-4d43-801b-2ff2be01c0bc",
-    "externalID": null,
-    "timestamp": 1524686415286,
-    "targetObject": "nsgateway",
-    "alarmedObjectID": "c48df22c-25de-4d43-801b-2ff2be01c0bc",
-    "enterpriseID": "1960a790-4176-4b22-8c84-806d41e73987"
-  };
-
-          array.push(obj);
-      do
-      {
-          i++;
-          var obj1 = JSON.parse(JSON.stringify(obj));
-          obj1.reason += "-" + i;
-          obj1.parentID += "-" + i;
-          array.push(obj1);
-      }while( i < num -1 );
-    
-    res.send(array);} );
+app.get( '/nuage/', function(req, res){ res.send(); } );
 app.get( '/nuage/api/v5_0/me', routes.tokenAuthorization );
 app.get( '/nuage/api/v5_0/enterprises/', routes.getNuageEnterprises );
 app.get( '/nuage/api/v5_0/enterprises/:id/nsgateways/', routes.getNuageNSGateways );
