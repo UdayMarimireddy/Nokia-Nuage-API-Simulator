@@ -24,4 +24,4 @@ app.get( '/', function( req, res ) {
 } );
 
 httpServer.listen( port );
-console.log( 'chinnu listening on port: ' + port );
+console.log( 'listening on port: ' + port );
